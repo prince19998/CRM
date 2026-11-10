@@ -198,7 +198,7 @@ def render_ai_assistant():
         st.write(selected.get("notes") or "No notes added.")
     c1, c2 = st.columns(2)
     with c1:
-        if st.button("✨ Generate AI Lead Summary", width="stretch"):
+        if st.button("Generate AI Lead Summary", width="stretch"):
             with st.spinner("Analyzing lead details..."):
                 result = api_request("POST", f'/ai/lead-summary/{selected["id"]}')
             if result:
